@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+body {
+  font-family: 'Poppins';
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+
+  text-align: center;
+
+  background: linear-gradient(180deg, #EC4040 99.99%, rgba(0, 0, 0, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.custom-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 70%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: lowercase;
+
+  color: #49625E !important;
+}
+
+.bg-rectangle {
+  position: absolute;
+  width: 100vw;
+  height: 399px;
+  bottom: 144px;
+  z-index: -1;
+
+  background: #49625E;
+  box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.25);
+  transform: matrix(1, -0.14, 0, 0.97, 0, 0);
+}
+
+.main-content {
+  background: linear-gradient(89.94deg, rgba(216, 212, 211, 0.333333) 0.06%, rgba(255, 255, 255, 0) 0.07%, rgba(216, 212, 211, 0.333333) 0.08%, #8B7F7C 0.09%);
+  filter: drop-shadow(4px 14px 67px rgba(0, 0, 0, 0.25));
+  backdrop-filter: blur(7px);
+}
+
+.content-text {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 94.5%;
+
+  text-align: right;
+
+  color: #F5F5F5;
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  .sacramento {
+    font-size: 42px;
+  }
+  .content-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 94.5%;
+  }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+  .sacramento {
+    font-size: 42px;
+  }
+  .content-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 94.5%;
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+  .sacramento {
+    font-size: 38px;
+    line-height: normal;
+  }
+  .content-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 94.5%;
+  }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px)
+and (orientation: landscape) {
+  .sacramento {
+    font-size: 38px;
+    line-height: normal;
+  }
+  .content-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 94.5%;
+  }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+  .sacramento {
+    font-size: 38px;
+    line-height: normal;
+  }
+  .content-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 94.5%;
+  }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .sacramento {
+    font-size: 38px;
+    line-height: normal;
+  }
+  .content-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 94.5%;
+  }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  .sacramento {
+    font-size: 38px;
+    line-height: normal;
+  }
+  .content-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 94.5%;
+  }
+}
+
+.content-text_secondary {
+  line-height: 100%;
+}
+
+.sacramento {
+  font-family: 'Sacramento';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77%;
+}
+
+.gato {
+  height: 400px;
+}
