@@ -92,62 +92,23 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 mt-3 border-top">
-    <p class="col-md-2 justify-content-center mb-0 custom-link">© 2022 Grupo Rojo 8</p>
-    <p class="col-md-2 justify-content-center mb-0 custom-link">Redes Sociales</p>
-  </footer>
+  <div class="container">
+    <!-- Separator -->
+    <div class="separador w-100 border border-1 mx-auto my-3 mt-3"></div>
+
+    <!-- Footer -->
+    <footer class="d-flex footer-text flex-wrap justify-content-center align-items-center py-3">
+      <p class="col-md-2 justify-content-center mb-0 custom-link">© 2022 Grupo Rojo 8</p>
+      <p class="col-md-2 justify-content-center mb-0 custom-link">Redes Sociales</p>
+    </footer>
+  </div>
 
   <!-- Background Rectangle -->
   <div class="bg-rectangle"></div>
 
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
-  <script>
-    var tl = gsap.timeline({
-      repeat: -1,
-    });
-
-    // bata
-    tl.to('gato-1', {
-      opacity: 0,
-      display: 'block',
-    }).to("#gato-1", {
-      duration: 0.1,
-      opacity: 1,
-    }).to("#gato-1", {
-      duration: 0.1,
-      opacity: 0,
-    }, "+=2").to("#gato-1", {
-      display: 'none'
-    })
-
-    // corbata
-    tl.to("#gato-2", {
-      display: 'block'
-    }, "<").to("#gato-2", {
-      duration: 0.1,
-      opacity: 1,
-    }).to("#gato-2", {
-      duration: 0.1,
-      opacity: 0,
-    }, "+=2").to("#gato-2", {
-      display: 'none'
-    })
-
-    // comfy
-    tl.to("#gato-3", {
-      display: 'block'
-    }, "<").to("#gato-3", {
-      duration: 0.1,
-      opacity: 1,
-    }).to("#gato-3", {
-      duration: 0.1,
-      opacity: 0,
-    }, "+=2").to("#gato-3", {
-      display: 'none'
-    })
-  </script>
+  <script src="./js/animacionGato.js"></script>
 </body>
 
 </html>
