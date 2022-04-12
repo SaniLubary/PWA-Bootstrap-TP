@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Ejercicio 3</title>
+  <title>Ejercicio 4</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,32 +19,84 @@
   <div class="container d-flex mx-auto p-5 justify-content-center">
     <a href="./ej-0.html" class="btn btn-primary">Volver</a>
   </div>
+  <div class="container">
+    <!-- Primer inciso -->
+    <p class="text-center fw-bold mt-5 w-50 mx-auto">
+      Implemente un contenedor que tenga 3 columnas con la misma cantidad de filas para
+      cualquier tipo de dispositivo usando 2 alternativas sin colapsar. (Ayuda: no usar *)
+    </p>
+    <div class="row border border-3 rounded m-1">
+      <div class="col-xxl-4 col-xl-5 col-lg-4 col-md-6 col-sm-6 col-xs-6">
+        <div class="row border border-3 rounded m-1">1 Sin colapsar</div>
+        <div class="row border border-3 rounded m-1">2</div>
+        <div class="row border border-3 rounded m-1">3</div>
+      </div>
+      <div class="col-xxl-4 col-xl-5 col-lg-4 col-md-6 col-sm-6 col-xs-6">
+        <div class="row border border-3 rounded m-1">1 Sin colapsar</div>
+        <div class="row border border-3 rounded m-1">2</div>
+        <div class="row border border-3 rounded m-1">3</div>
+      </div>
+      <div class="col">
+        <div class="row border border-3 rounded m-1">1</div>
+        <div class="row border border-3 rounded m-1">2</div>
+        <div class="row border border-3 rounded m-1">3</div>
+      </div>
+    </div>
+  </div>
 
-  <div class="container" style="border: 1 solid black;">
-    <div class="row">
+  <div class="container">
+    <p class="text-center fw-bold mt-5 w-50 mx-auto">
+      Implemente un contenedor que tenga todas las columnas con la misma cantidad de filas para
+      cualquier tipo de dispositivo, con una fila sin colapsar y otra que colapse para un tamaño fijo,
+      por ejemplo para “lg”.
+    </p>
+    <div class="row g-3 border border-3 rounded m-1">
       <div class="col">
-        <div class="row">xxl</div>
-        <div class="row">xl</div>
-        <div class="row">lg</div>
-        <div class="row">md</div>
-        <div class="row">sm</div>
-        <div class="row">sm</div>
+        <div class="row border border-3 rounded m-1">1 Sin colapsar</div>
+        <div class="row-cols-lg-1 border border-3 rounded m-1">2 Colapsar en lg</div>
       </div>
       <div class="col">
-        <div class="row">xxl</div>
-        <div class="row">xl</div>
-        <div class="row">lg</div>
-        <div class="row">md</div>
-        <div class="row">sm</div>
-        <div class="row">sm</div>
+        <div class="row border border-3 rounded m-1">1</div>
+        <div class="row-cols-lg-6 border border-3 rounded m-1">2</div>
       </div>
-      <div class="col">
-        <div class="row">xxl</div>
-        <div class="row">xl</div>
-        <div class="row">lg</div>
-        <div class="row">md</div>
-        <div class="row">sm</div>
-        <div class="row">sm</div>
+    </div>
+  </div>
+
+  <!-- Tercer inciso -->
+  <div class="container">
+    <p class="text-center fw-bold mt-5 w-50 mx-auto">
+      Implemente un contenedor que tenga una columna con un ancho en unidades fijo y la
+      columna de la izquierda o derecha o ambas sin valor
+    </p>
+    <div class="row border border-3 rounded m-1">
+      <div class="col border border-3 rounded m-1">
+        1
+      </div>
+      <div class="col-6 border border-3 rounded m-1">
+        2 Unidad fija de col-6
+      </div>
+      <div class="col border border-3 rounded m-1">
+        3
+      </div>
+    </div>
+  </div>
+
+  <!-- Cuarto inciso -->
+  <div class="container">
+    <p class="text-center fw-bold mt-5 w-50 mx-auto">
+      Y si necesitamos que se repartan los espacios teniendo en cuenta la cantidad de contenido
+      de una columna? ¿Cómo lo haríamos?
+    </p>
+    <div class="row border border-3 rounded p-1 justify-content-center align-content-center">
+      <div class="col border border-3 rounded p-3">
+        1
+      </div>
+      <div class="col-auto border border-3 rounded p-3">
+        2 En estas cols <br />se deberia estar respetando los espacios de acuerdo a cantidad de contenido por cada
+        columna
+      </div>
+      <div class="col border border-3 rounded p-3">
+        3 La columna 1 y esta, no sufren el mismo efecto
       </div>
     </div>
   </div>
