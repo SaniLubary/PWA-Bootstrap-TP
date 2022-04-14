@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+  font-family: 'Poppins';
+}
+
+a {
+  color: #49625E !important;
+}
+
+.content {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  
+  background: url('../assets/red\ bg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 35rem;
+
+  transition: all 300ms;
+}
+
+/* dominio */
+.content.dominio {
+  background: url('../assets/small\ red\ bg.png');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100%;
+
+  transition: all 300ms;
+}
+
+/* equipos */
+.content.equipos {
+  background: url('../assets/small\ red\ bg\ fliped.png');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100%;
+  
+  transition: all 300ms;
+}
+
+/* MEDIA */
+/* QUERIES */
+@media screen and (min-width: 1920px) {
+  .content {
+    background-position: 20% 20%;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  /* dominio */
+  .cats-bottom.dominio {
+    height: 40% !important;
+    top: 12rem !important;
+  }
+
+  .cat.gun {
+    left: -130px !important;
+    top: -160px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    background-size: 110%;
+    background-position: 100% 100%;
+  }
+
+  .cats-bottom {
+    height: 50%;
+    top: 0rem !important;
+  }
+
+  .rightHomeCat {
+    position: relative;
+    top: 1rem !important;
+    left: 85px !important;
+  }
+
+    /* dominio */
+  .cats-bottom.dominio {
+    height: 40% !important;
+    top: 13rem !important;
+  }
+
+  .cat.gun {
+    left: -60px !important;
+    top: -120px !important;
+  }
+
+  /* equipos */
+  .content.equipos {
+    background: url('../assets/small\ red\ bg\ fliped.png');
+    background-repeat: no-repeat;
+    background-position: 0 70%;
+    background-size: 100%;
+    
+    transition: all 300ms;
+  }
+}
+
+.texts {
+  position: relative;
+  top: 10rem;
+  color: text__equipos;
+  transition: all 300ms;
+}
+
+.text.dominio {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+
+  text-transform: lowercase;
+
+  color: #49625E;
+
+  transition: all 300ms;
+}
+
+.left {
+  position: relative;
+  left: 150px;
+
+  transition: all 300ms;
+}
+
+.right {
+  position: relative;
+  right: 100px;
+
+  transition: all 300ms;
+}
+
+h3 {
+  color: #49625E;
+}
+
+h2 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 100%;
+
+  text-align: center;
+  text-transform: lowercase;
+
+  color: #EC4040;
+
+}
+
+.highlight {
+  color: #49625E;
+}
+
+.cats-bottom {
+  position: relative;
+  top: -9rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  transition: all 300ms;
+}
+
+/* dominio */
+.cats-bottom.dominio {
+  height: 40%;
+  top: 14rem;
+  z-index: -1;
+}
+
+.cat.hat {
+  position: relative;
+  top: -50px;
+  left: 80px;
+}
+
+.cat.gun {
+  transition: all 300ms;
+  position: relative;
+  top: -130px;
+  left: -70px;
+  transform: rotate(-10deg) scaleX(-1);
+}
+
+/* equipos */
+.cat.classy {
+  position: relative;
+  z-index: -1;
+  left: 70%;
+  top: -80px;
+}
+
+.rightHomeCat {
+  position: relative;
+  top: 5px;
+  left: 95px;
+  transform: scaleX(-1);
+}
