@@ -1,0 +1,27 @@
+.col {
+  padding: 1em;
+}
+
+.col div {
+  border: 3px solid rgb(79, 79, 79);
+}
+
+header .col div, footer .col div {
+  background-color: #75FB4C;
+}
+
+.blue .col div {
+  background-color:  #8EA9DA;
+}
+
+.grey .col div {
+  background-color: #CCCCCC;
+}
+
+.cyan .col div {
+  background-color: #75FBFD;
+}
+
+.orange .col div {
+  background-color: #F19E62;
+}
