@@ -132,7 +132,7 @@ class Estacion
           // se arma elemento a devolver segun tipo deseado
           $arr = $obj = null;
           if ($as_array) {
-            $arr = ["id" => $row['id'], "descripcion" => $row['descripcion']];
+            $arr = $row;
           } else {
             $obj = new Estacion();
             $obj->setear($row['id'], $row['descripcion']);

@@ -116,7 +116,7 @@ class Tab
     return $resp;
   }
 
-  public static function listar($parametro = "")
+  public static function listar($parametro = "", $as_array = false)
   {
     $arreglo = array();
     $base = new BaseDatos();
@@ -128,9 +128,17 @@ class Tab
     if ($resp > -1) {
       if ($resp > 0) {
         while ($row = $base->Registro()) {
-          $obj = new Tab();
-          $obj->setear($row['id'], $row['contenido']);
-          array_push($arreglo, $obj);
+
+          // se arma elemento a devolver segun tipo deseado
+          $arr = $obj = null;
+          if ($as_array) {
+            $arr = $row;
+          } else {
+            $obj = new Tab();
+            $obj->setear($row['id'], $row['contenido']);
+          }
+
+          array_push($arreglo, $arr ? $arr : $obj);
         }
       }
     }

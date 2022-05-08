@@ -84,7 +84,7 @@ class TabController
    * @param boolean $porEstado True si se quiere buscar por estado de tabla EstacionesEstado
    * @return array<Tab>  
    */
-  public function buscar($param)
+  public function buscar($param, $as_array = false)
   {
     $where = " true ";
     if ($param <> NULL) {
@@ -95,7 +95,7 @@ class TabController
     }
 
     $tab = new Tab();
-    $estacioness = $tab->listar($where);
+    $estacioness = $tab->listar($where, $as_array);
 
     return $estacioness;
   }
