@@ -11,6 +11,7 @@ services:
             - db
         networks:
             - default
+        container_name: pwa-php
     db:
         platform: linux/x86_64
         image: mysql
@@ -26,6 +27,7 @@ services:
             - persistent:/var/lib/mysql
         networks:
             - default
+        container_name: pwa-db
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         links: 
@@ -36,5 +38,6 @@ services:
             MYSQL_USER: user
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test
+        container_name: pwa-phpmyadmin
 volumes:
     persistent:
