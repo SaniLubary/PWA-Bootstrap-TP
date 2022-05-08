@@ -81,12 +81,107 @@ CREATE TABLE `tabs` (
 --
 INSERT INTO `tabs` (`id`, `contenido`)
 VALUES (
-    1,
-    '<h3>AJAX</h3>\r\n<p>AJAX, acrónimo de Asynchronous JavaScript And XML (JavaScript asíncrono y XML), es una técnica de desarrollo web para crear aplicaciones interactivas o RIA (Rich Internet Applications). Estas aplicaciones se ejecutan en el cliente, es decir, en el navegador de los usuarios mientras se mantiene la comunicación asíncrona con el servidor en segundo plano. De esta forma es posible realizar cambios sobre las páginas sin necesidad de recargarlas, lo que significa aumentar la interactividad, velocidad y usabilidad en las aplicaciones.</p>'
+    0,
+    '<div class="row p-5 align-items-center">
+      <h2 class="m-2">
+        Lo &uacute;ltimo en moda:
+        <span class="highlight">
+          primavera verano
+        </span>
+      </h2>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col-xl-4">
+          <div class="card">
+            <img src="../assets/producto_camisa.jpeg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title highlight">Camisa Hawaiana</h5>
+              <p class="card-text">
+                Tela Algodón, polyester ,lino y viscosa. Composición
+                100% viscosa. Acceso: botones
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card">
+            <img src="../assets/producto_anteojos.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title highlight">Anteojos de sol</h5>
+              <p class="card-text">
+                Ideal para mascotas por su material flexible, construido
+                sin piezas metálicas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card">
+            <img src="../assets/producto_sombrero.jpeg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title highlight">Sombrero de paja</h5>
+              <p class="card-text">
+                Forrado en jersey 100% paja. No posee orificios para las
+                orejas. Detalle de flores amarillas
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>'
   ),
   (
-    2,
-    '<h3>JAVASCRIPT</h3><p>JavaScript es un lenguaje de programación interpretado, es decir, que no requiere compilación, utilizado principalmente en páginas web, con una sintaxis semejante a la del lenguaje Java y el lenguaje C.\r\n<br />\r\nAl igual que Java, JavaScript es un lenguaje orientado a objetos propiamente dicho, ya que dispone de Herencia, si bien esta se realiza siguiendo el paradigma de programación basada en prototipos, ya que las nuevas clases se generan clonando las clases base (prototipos) y extendiendo su funcionalidad.</p>'
+    1,
+    '<div class="row p-5 align-items-center">
+      <h2 class="m-2">
+        Lo &uacute;ltimo en moda:<span class="highlight">
+          Oto&ntilde;o Invierno</span>
+      </h2>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        <div class="col-xl-4">
+          <div class="card">
+            <img src="../assets/productoChaleco.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title highlight">Chaleco</h5>
+              <p class="card-text">
+                Chaleco oversize escote en U con abotonadura central al
+                frente con botones marmolados. Tejido con punto fantasía
+                motivo trenzado en delantero.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4">
+          <div class="card">
+            <img src="../assets/productoBufanda.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title highlight">Bufanda</h5>
+              <p class="card-text">
+                Algodón|Polyester|Lino|Viscosa Composición 49%
+                rayon viscosa - 29% poliéster - 22% poliamida
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4">
+          <div class="card">
+            <img src="../assets/productoSueter.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title highlight">Sweater</h5>
+              <p class="card-text">
+                Sweater con alta capacidad calórica, segunda y tercera
+                piel. Ideal para otoño/invierno.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>'
   );
 -- --------------------------------------------------------
 --
