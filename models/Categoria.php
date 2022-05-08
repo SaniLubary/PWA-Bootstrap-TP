@@ -164,6 +164,9 @@ class Categoria
           // armar tipo de elemento a devolver
           $arr = $obj = null;
           if ($as_array) {
+            // En este caso, no se manda $row directamente, para evitar 
+            //   cargar el valor $estaciones_id en el array final, duplicando 
+            //   ese dato (que ya viene en el arr de estacion)
             $arr = ["id" => $row['id'], "descripcion" => $row['descripcion'], "estacion" => $estacion];
           } else {
             $obj = new Categoria();

@@ -1,5 +1,4 @@
-<?php
-include_once("../components/header.php"); ?>
+<?php include_once("../components/header.php"); ?>
 
 <!-- Content -->
 <div class="container row main-content mx-auto align-items-center my-5 p-3 w-75">

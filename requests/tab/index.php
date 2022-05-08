@@ -12,13 +12,13 @@ include '../../config.php';
 if (
   $_SERVER['REQUEST_METHOD'] = 'GET' && !$_GET
 ) {
-  $categoriaController = new CategoriaController();
-  $categorias = $categoriaController->buscar(null, true);
+  $tabController = new TabController();
+  $tabs = $tabController->buscar(null, true);
 
-  print json_encode(['response' => true, 'payload' => $categorias]);
-
+  print json_encode(['response' => true, 'payload' => $tabs]);
   exit();
 }
+
 // Si la request vino con parametros, se avisa que esto no es requerido
 if ($_GET) {
   print json_encode(['response' => false, 'mensaje' => 'Esta no requiere parametros.']);
