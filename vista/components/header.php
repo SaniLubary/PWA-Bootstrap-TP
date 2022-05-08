@@ -1,3 +1,5 @@
+<?php include "/var/www/html/config.php"; ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,12 +9,8 @@
   <title>GaTop</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/ej-11.css">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
 
@@ -44,25 +42,9 @@
           <a class="nav-link custom-link" aria-current="page" href="../tp2/tp2-ej0.php">Inicio</a>
         </li>
         <li class="nav-item dropdown ">
-          <a class="nav-link custom-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link custom-link" href="/vista/tp-bootstrap/ej-0.html" role="button">
             Bootstrap
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li class="nav-item">
-              <a class="nav-link custom-link" aria-current="page" href="../tp-bootstrap/ej-0-popper.html">popper?</a>
-            </li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-1.html">ejercicio 1</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-2.html">ejercicio 2</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-3.html">ejercicio 3</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-4.html">ejercicio 4</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-5.html">ejercicio 5</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-6.html">ejercicio 6</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-7.html">ejercicio 7</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-8.html">ejercicio 8</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-9.html">ejercicio 9</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-10.html">ejercicio 10</a></li>
-            <li><a class="dropdown-item" href="../tp-bootstrap/ej-11.html">ejercicio 11</a></li>
-          </ul>
         </li>
 
         <li class="nav-item dropdown ">
@@ -70,9 +52,7 @@
             Ajax &AMP; jquery
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Ejercicio 1</a></li>
-            <li><a class="dropdown-item" href="#">Ejercicio 2</a></li>
-
+            <li><a class="dropdown-item" href="ej-1.php">Ejercicio 1</a></li>
           </ul>
         </li>
 
