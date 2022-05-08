@@ -13,13 +13,10 @@ if (
   $_SERVER['REQUEST_METHOD'] = 'GET' && !$_GET
 ) {
   $estacionController = new EstacionController();
+  $estaciones = $estacionController->buscar(null, true);
 
-  if ($estaciones = $estacionController->buscar(null, true)) {
-    print json_encode($estaciones);
-    exit();
-  }
+  print json_encode(['response' => true, 'payload' => $estaciones]);
 
-  print json_encode(['response' => true]);
   exit();
 }
 // Si la request vino con parametros, se avisa que esto no es requerido
