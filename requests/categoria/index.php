@@ -19,6 +19,7 @@ if (
 
   exit();
 }
+
 // Si la request vino con parametros, se avisa que esto no es requerido
 if ($_GET) {
   print json_encode(['response' => false, 'mensaje' => 'Esta no requiere parametros.']);

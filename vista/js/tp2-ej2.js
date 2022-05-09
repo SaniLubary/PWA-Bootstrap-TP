@@ -4,5 +4,6 @@ $(document).ready(function () {
     .then(data => {
       $('#pills-nombre').append(data.payload[0].contenido);
       $('#pills-razones').append(data.payload[1].contenido);
-    });
+    })
+    .catch(error => console.error(error));
 });
