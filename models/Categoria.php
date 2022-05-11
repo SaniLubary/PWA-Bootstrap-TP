@@ -158,7 +158,7 @@ class Categoria
         while ($row = $base->Registro()) {
           // Obtener estacion
           $estacionesController = new EstacionController();
-          $estacion = $estacionesController->buscar(['estaciones_id' => $row['estaciones_id']], true);
+          $estacion = $estacionesController->buscar(['id' => $row['estaciones_id']], true);
           if (!empty($estacion)) $estacion = $estacion[0];
 
           // armar tipo de elemento a devolver
