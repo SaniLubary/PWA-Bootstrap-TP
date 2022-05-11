@@ -10,8 +10,17 @@ Descargar [Docker](https://www.docker.com/products/docker-desktop/) para tener e
 
 ## Como Levantar el Proyecto
 
-- Correr en una terminal (estando parado dentro del root del proyecto) el siguiente comando:
+- Descargar Repositorio:
+```bash
+git clone https://github.com/SaniLubary/PWA-Bootstrap-TP.git
+```
 
+- Ingresa a la carpeta descargada:
+```bash
+cd PWA-Bootstrap-TP
+```
+
+- Correr el siguiente comando:
 ```bash
 # este comando sera lento la primera vez que se corra, ya que tiene que descargar muchos datos
 docker-compose up -d
