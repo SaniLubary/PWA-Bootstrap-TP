@@ -42,3 +42,11 @@ h1 {
 .bg-rectangle {
   top: 70%;
 }
+
+.accordion-button::after {
+  margin-left: 20px !important;
+}
+
+.info-button:hover {
+  transform: scale(1.2);
+}
