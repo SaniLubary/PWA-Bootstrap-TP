@@ -76,6 +76,21 @@ function setListItemActive(element) {
   }
 
   activeListItemId = element.id
-  console.log(activeListItemId);
   element.className += ' active'
+}
+
+async function openModal(accordionHeaderId) {
+  // Get descripcion para header clickeado
+  const modalDesc = await fetch('http://localhost:8001/requests/modalDesc.json')
+    .then(response => response.json())
+    .then(data => {
+      return data.payload
+    })
+    .catch(error => console.error(error));
+
+  const desc = modalDesc.filter(desc => desc.id == accordionHeaderId)[0]
+
+  $('#modal').modal('toggle');
+  $('#modal-desc').html(desc.descripcion);
+  $('#modalLabel').html(desc.titulo);
 }

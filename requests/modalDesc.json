@@ -1,0 +1,35 @@
+{
+  "response": true,
+  "payload": [
+    {
+      "id": "headingZero",
+      "titulo": "Ropa en gatos?",
+      "descripcion": "Existe una larga tradición de ropa funcional muy específica para animales. <br><br>Los antiguos ejércitos griegos ponían botas de cuero en los pies de sus caballos para protegerlos de la nieve. <br>Los animales policía se pueden vestir con fundas fluorescentes. <br><br>Pero ahora la ropa menos funcional se está convirtiendo en una industria en auge, con boutiques que ofrecen todo tipo de atuendos exóticos."
+    },
+    {
+      "id": "headingTwo",
+      "titulo": "Cosplays en gatos??",
+      "descripcion": "Con la popularidad cada vez mayor de series Japonesas, Videojuegos y Comics, aumento tambien mucho los pedidos que recibimos de esta clase de disfraces!"
+    },
+    {
+      "id": "headingOne",
+      "titulo": "Accesorios",
+      "descripcion": "Desde desestresar a tu felino, hasta facilitarte la vida a ti mismo, con un poco de estilo en el camino, tenemos muchos mas accesorios a venir dentro de poco!"
+    },
+    {
+      "id": "headingThree",
+      "titulo": "Correas y Collares",
+      "descripcion": "Esta clase de accesorios merecen su propia categoria, con una enorme variedad de estilos y funcionalidad, podes representar de la mejor forma la personalidad de tu puma."
+    },
+    {
+      "id": "headingFour",
+      "titulo": "Entrenamiento",
+      "descripcion": "No todo el mundo comparte la misma opinión sobre si es recomendable que nuestro gato luzca su propia ropa, ya que muchos dueños no son conscientes de sus inconvenientes a la hora de ponerle cualquier prenda.<br><br>Por esto, si tienes tiempo, puedes dedicarle un tiempo diario para entrenar a tu gato, aumentando su felicidad y la tuya."
+    },
+    {
+      "id": "headingFive",
+      "titulo": "Premios",
+      "descripcion": "Sea que lo quieras entrenar, o solo lo quieras admirar deborando algo delicioso, un premio lo tiene bien merecido por el hecho de existir."
+    }
+  ]
+}
