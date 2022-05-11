@@ -6,11 +6,13 @@ En este Repo encontraras los primeros trabajos de la materia, mas una carpeta `e
 
 Descargar [Docker](https://www.docker.com/products/docker-desktop/) para tener el ambiente optimo para el proyecto.
 
-## Usage
+*En windows __NO__ configurar WSL, es innecesario para este proyecto y genera confusiones/errores en usuarios menos avanzados 😮‍💨*
 
-Se configuraran e instalaran las dependencias para el proyecto, ademas de quedar el servidor levantado para usar
+## Como Levantar el Proyecto
+
+La configuracion e instalacion de dependencias se realiza automaticamente con este comando, y los servidores quedan levantados una vez finalizado el proceso
 ```bash
-# este comando va ser lento unicamente la primera vez que se corra
+# este comando va ser lento unicamente la primera vez que se corra, ya que tiene que descargar muchos datos
 docker-compose up -d
 ```
 
