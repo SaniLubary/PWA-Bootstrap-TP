@@ -10,9 +10,10 @@ Descargar [Docker](https://www.docker.com/products/docker-desktop/) para tener e
 
 ## Como Levantar el Proyecto
 
-La configuracion e instalacion de dependencias se realiza automaticamente con este comando, y los servidores quedan levantados una vez finalizado el proceso
+- Correr en una terminal (estando parado dentro del root del proyecto) el siguiente comando:
+
 ```bash
-# este comando va ser lento unicamente la primera vez que se corra, ya que tiene que descargar muchos datos
+# este comando sera lento la primera vez que se corra, ya que tiene que descargar muchos datos
 docker-compose up -d
 ```
 
