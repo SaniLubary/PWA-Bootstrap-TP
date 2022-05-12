@@ -73,6 +73,6 @@ async function submit() {
 	console.log(content);
 	if (content.response === true) {
 		alert('Cargado exitosamente!')
-	} alert('Hubo un error cargando sus datos :(')
+	} else alert('Hubo un error cargando sus datos :(')
 
 };
