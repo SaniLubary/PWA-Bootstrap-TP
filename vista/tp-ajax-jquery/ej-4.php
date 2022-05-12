@@ -34,8 +34,14 @@
                                         </div>
 
                                         <div class="row">
+                                            <div class="col-md-12 form-group autocomplete">
+                                                <input id="estado" type="text" class="form-control" name="estado" placeholder="Estado/Provincia">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
                                             <div class="col-md-12 form-group">
-                                                <input type="tel" pattern="^\d{4}-\d{3}-\d{4}$" class="form-control" name="telefono" id="telefono" placeholder="Telefono">
+                                                <input type="text" pattern="^\d{4}-\d{3}-\d{4}$" class="form-control" name="telefono" id="telefono" placeholder="Telefono">
                                             </div>
                                         </div>
 
@@ -84,6 +90,5 @@
 
 </div>
 
-<!-- <script src="../js/tp2-ej2.js" defer></script> -->
-
 <?php include_once("../components/footer.php"); ?>
+<script src="../js/tp2-ej6.js" defer></script>
