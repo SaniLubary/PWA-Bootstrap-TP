@@ -3,6 +3,7 @@ $(function () {
 
 	// Form
 	var contactForm = function () {
+		
 		$("#contactForm").validate({
 			rules: {
 				nombre: {
@@ -44,9 +45,13 @@ $(function () {
 	$("#contactForm").submit(function (event) {
 		event.preventDefault();
 
-		if ($("#contactForm").validate()) {
+		//console.log(Object.keys($("#contactForm").validate().invalid).length);
+		
+		if (Object.keys($("#contactForm").validate().invalid).length == 0) {
 			submit()
+			//console.log(submit())
 		}
+		//else console.log("Datos no enviado")
 
 	});
 
