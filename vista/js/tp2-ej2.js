@@ -33,7 +33,10 @@ $(document).ready(async function () {
     const idEstacion = $('#estaciones').find(":selected").val();
     const categoriasFiltrado = categorias.filter(categoria => categoria.estacion.id == idEstacion)
 
+    // Resetear Select
+    $('#categorias').html('')
     // Cargando estaciones en el select
+    $('#categorias').append(`<option selected">Seleccionar una Opcion</option>`)
     categoriasFiltrado.map(categoria => {
       $('#categorias').append(`<option value="${categoria.id}">${categoria.descripcion}</option>`)
     })

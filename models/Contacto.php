@@ -1,9 +1,12 @@
 <?php
-class Categoria
+class Contacto
 {
   private $id;
-  private $descripcion;
-  private $estacion;
+  private $nombre;
+  private $empresa;
+  private $telefono;
+  private $mail;
+  private $comentario;
   private $mensajeoperacion;
 
   public function getId()
@@ -16,27 +19,66 @@ class Categoria
     $this->id = $id;
   }
 
-  public function getDescripcion()
+  public function getNombre()
   {
-    return $this->descripcion;
+    return $this->nombre;
   }
 
-  public function setDescripcion($descripcion)
+  public function setNombre($nombre)
   {
-    $this->descripcion = $descripcion;
+    $this->nombre = $nombre;
   }
 
   /**
    * @param model<Usuario>
    */
-  public function setEstacion($estacion)
+  public function setEmpresa($empresa)
   {
-    $this->estacion = $estacion;
+    $this->empresa = $empresa;
   }
 
-  public function getEstacion()
+  public function getEmpresa()
   {
-    return $this->estacion;
+    return $this->empresa;
+  }
+
+  /**
+   * @param model<Usuario>
+   */
+  public function setTelefono($telefono)
+  {
+    $this->telefono = $telefono;
+  }
+
+  public function getTelefono()
+  {
+    return $this->telefono;
+  }
+
+  /**
+   * @param model<Usuario>
+   */
+  public function setMail($mail)
+  {
+    $this->mail = $mail;
+  }
+
+  public function getMail()
+  {
+    return $this->mail;
+  }
+
+  /**
+   * @param model<Usuario>
+   */
+  public function setComentario($comentario)
+  {
+    $this->comentario = $comentario;
+  }
+
+  public function getComentario()
+  {
+    return $this->comentario;
   }
 
 
@@ -53,23 +95,29 @@ class Categoria
   public function __construct()
   {
     $this->id = "";
-    $this->descripcion = "";
-    $this->estacion = "";
+    $this->nombre = "";
+    $this->empresa = "";
+    $this->telefono = "";
+    $this->mail = "";
+    $this->comentario = "";
     $this->mensajeoperacion = "";
   }
 
-  public function setear($id, $descripcion, $estacion)
+  public function setear($id, $nombre, $empresa, $telefono, $mail, $comentario)
   {
     $this->setId($id);
-    $this->setDescripcion($descripcion);
-    $this->setEstacion($estacion);
+    $this->setNombre($nombre);
+    $this->setEmpresa($empresa);
+    $this->setTelefono($telefono);
+    $this->setMail($mail);
+    $this->setComentario($comentario);
   }
 
 
   public function cargar()
   {
     $base = new BaseDatos();
-    $sql = "SELECT * FROM categorias WHERE id = " . $this->getId();
+    $sql = "SELECT * FROM contactos WHERE id = " . $this->getId();
     if (!$base->Iniciar()) {
       $this->setMensajeoperacion("categoriaItem->cargar: " . $base->getError()[2]);
       return false;
@@ -78,10 +126,7 @@ class Categoria
     if ($base->Ejecutar($sql) > 0) {
       $row = $base->Registro();
 
-      $estacion = Estacion::listar(' true and estaciones_id = ' . $row['estaciones_id']);
-      if (!empty($estacion)) $estacion = $estacion[0];
-
-      $this->setear($row['id'], $row['descripcion'], $row['id']);
+      $this->setear($row['id'], $row['nombre'], $row['empresa'], $row['telefono'], $row['mail'], $row['comentario']);
     }
 
     return true;
@@ -91,8 +136,8 @@ class Categoria
   {
     $resp = false;
     $base = new BaseDatos();
-    $sql = "INSERT INTO categorias( descripcion, estaciones_id ) ";
-    $sql .= "VALUES('" . $this->getDescripcion() . "', '" . $this->getEstacion()->getId() . "');";
+    $sql = "INSERT INTO contactos( nombre, empresa, telefono, mail, comentario ) ";
+    $sql .= "VALUES('" . $this->getNombre() . "', '" . $this->getEmpresa() . "', '" . $this->getTelefono() . "', '"  . $this->getMail() . "', '" .  $this->getComentario() . "');";
     if ($base->Iniciar()) {
       if ($elid = $base->Ejecutar($sql)) {
         $this->setId($elid);
@@ -110,7 +155,7 @@ class Categoria
   {
     $resp = false;
     $base = new BaseDatos();
-    $sql = "UPDATE categorias SET descripcion='" . $this->getDescripcion() . "', estacion='" . $this->getEstacion()->getId() . "'";
+    $sql = "UPDATE contactos SET nombre='" . $this->getNombre() . "', empresa='" . $this->getEmpresa() . "'" . "', telefono='" . $this->getTelefono() . "'" . "', mail='" . $this->getMail() . "'" . "', comentario='" . $this->getComentario() . "'";
     $sql .= " WHERE id = " . $this->getId();
     if ($base->Iniciar()) {
       if ($base->Ejecutar($sql)) {
@@ -128,7 +173,7 @@ class Categoria
   {
     $resp = false;
     $base = new BaseDatos();
-    $sql = "DELETE FROM categorias WHERE id =" . $this->getId();
+    $sql = "DELETE FROM contactos WHERE id =" . $this->getId();
     if ($base->Iniciar()) {
       if ($base->Ejecutar($sql)) {
         $resp = true;
@@ -146,7 +191,7 @@ class Categoria
     $arreglo = array();
     $base = new BaseDatos();
 
-    $sql = "SELECT * FROM categorias ";
+    $sql = "SELECT * FROM contactos ";
 
     if ($parametro != "") {
       $sql .= 'WHERE ' . $parametro;
@@ -156,21 +201,13 @@ class Categoria
     if ($res > -1) {
       if ($res > 0) {
         while ($row = $base->Registro()) {
-          // Obtener estacion
-          $estacionesController = new EstacionController();
-          $estacion = $estacionesController->buscar(['id' => $row['estaciones_id']], true);
-          if (!empty($estacion)) $estacion = $estacion[0];
-
           // armar tipo de elemento a devolver
           $arr = $obj = null;
           if ($as_array) {
-            // En este caso, no se manda $row directamente, para evitar 
-            //   cargar el valor $estaciones_id en el array final, duplicando 
-            //   ese dato (que ya viene en el arr de estacion)
-            $arr = ["id" => $row['id'], "descripcion" => $row['descripcion'], "estacion" => $estacion];
+            $arr = $row;
           } else {
-            $obj = new Categoria();
-            $obj->setear($row['id'], $row['descripcion'], $estacion);
+            $obj = new Contacto();
+            $obj->setear($row['id'], $row['nombre'], $row['empresa'], $row['telefono'], $row['mail'], $row['comentario']);
           }
 
           array_push($arreglo, $arr ? $arr : $obj);

@@ -44,14 +44,23 @@ CREATE TABLE `categorias` (
 -- Volcado de datos para la tabla `categorias`
 --
 INSERT INTO `categorias` (`id`, `descripcion`, `estaciones_id`)
-VALUES (0, 'anteojos1', 0),
-  (1, 'anteojos2', 0),
-  (2, 'anteojos3', 1),
-  (3, 'anteojos4', 1),
-  (4, 'anteojos5', 2),
-  (5, 'anteojos6', 2),
-  (6, 'anteojos7', 3),
-  (7, 'anteojos8', 3);
+VALUES (0, 'Camisas', 0),
+  (1, 'Sombreros', 0),
+  (9, 'Correas / Collares Primavera', 0),
+  (10, 'Correas / Collares Verano', 1),
+  (11, 'Correas / Collares Otoño', 2),
+  (12, 'Correas / Collares Invierno', 3),
+  (13, 'Accesorios para todo el Año', 0),
+  (14, 'Accesorios para todo el Año', 1),
+  (15, 'Accesorios para todo el Año', 2),
+  (16, 'Accesorios para todo el Año', 3),
+  (2, 'Vestido', 1),
+  (3, 'Anteojos de Sol', 1),
+  (4, 'Sweater', 2),
+  (5, 'Camisas largas', 2),
+  (6, 'Bufandas', 3),
+  (7, 'Abrigo', 3),
+  (8, 'Gorritos', 3);
 -- --------------------------------------------------------
 --
 -- Estructura de tabla para la tabla `estaciones`
