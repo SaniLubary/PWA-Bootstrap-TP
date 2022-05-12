@@ -1,5 +1,21 @@
-input {
+input, textarea, label {
   margin: 2%;
+}
+
+label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  /* or 48px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: lowercase;
+
+  color: #49625e;
 }
 
 h3 {

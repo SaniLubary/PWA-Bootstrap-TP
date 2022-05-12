@@ -44,22 +44,19 @@ $(function () {
 	// Enviamos respuesta on submit al servidor
 	$("#contactForm").submit(function (event) {
 		event.preventDefault();
-
-		//console.log(Object.keys($("#contactForm").validate().invalid).length);
-		
+	
 		if (Object.keys($("#contactForm").validate().invalid).length == 0) {
 			submit()
-			//console.log(submit())
 		}
-		//else console.log("Datos no enviado")
 
 	});
 
 
 });
 
+
 async function submit() {
-	const rawResponse = await fetch('http://localhost:8001/requests/contacto', {
+	const rawResponse = await fetch('http://localhost:8001/requests/contacto/', {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
@@ -74,8 +71,7 @@ async function submit() {
 		})
 	});
 
-
-
 	const content = await rawResponse.json();
 	console.log(content);
+
 };

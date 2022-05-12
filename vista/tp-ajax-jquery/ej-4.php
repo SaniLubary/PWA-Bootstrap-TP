@@ -23,31 +23,37 @@
                                     <form class="mb-5" id="contactForm" name="contactForm">
                                         <div class="row">
                                             <div class="col-md-12 form-group">
-                                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre completo">
+                                                <label> Nombre: </label>
+                                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" required>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-md-12 form-group">
-                                                <input type="text" class="form-control" name="empresa" id="empresa" placeholder="Empresa">
+                                            <label> Empresa: </label>
+                                                <input type="text" class="form-control" name="empresa" id="empresa" placeholder="Ingrese el nombre de su empresa" required>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-md-12 form-group">
-                                                <input type="tel" pattern="^\d{4}-\d{3}-\d{4}$" class="form-control" name="telefono" id="telefono" placeholder="Telefono">
+                                            <label> Telefono: </label>
+                                                <input type="tel" class="form-control" pattern="^\d{4}-\d{3}-\d{4}$" name="telefono" id="telefono" placeholder="Telefono" required>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="row">
+                                            <div class="col-md-12 form-group">
+                                            <label> Mail: </label>
+                                                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="mail" id="mail" placeholder="Mail" required>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-md-12 form-group">
-                                                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" name="mail" id="mail" placeholder="Mail">
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12 form-group">
-                                                <textarea class="form-control" name="comentario" id="comentario" cols="30" rows="7" placeholder="Comentarios"></textarea>
+                                            <label> Comentario: </label>
+                                                <textarea class="form-control" name="comentario" id="comentario" cols="30" rows="7" placeholder="Comentarios"></textarea required>
                                             </div>
                                         </div>
 
